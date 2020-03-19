@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "declaration": true,
+    "declarationMap": true,
+    "noImplicitAny": true,
+    "noEmitOnError": false,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "downlevelIteration": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es5",
+    "jsx": "react",
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "sourceMap": true,
+    /**
+     * #6: fix Intellisense and go to definition for absolute path
+     * here you can learn more those links:
+     * 1. https://code.visualstudio.com/docs/languages/jsconfig
+     * 2. https://github.com/vuejs/vetur/blob/master/docs/setup.md#path-mapping
+     * 3. https://github.com/vuejs/vetur/issues/423#issuecomment-340235722
+     */
+    // see more: https://github.com/vuejs/vetur/blob/master/docs/setup.md#path-mapping
+    // This must be specified if "paths" is set
+    "baseUrl": ".",
+    // Relative to "baseUrl"
+    "paths": {
+      "src/*": ["./src/*"],
+    }
+  },
+  "plugins": [{
+    "name": "tslint-language-service"
+  }],
+  "include": [
+    "src/components/code/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}
